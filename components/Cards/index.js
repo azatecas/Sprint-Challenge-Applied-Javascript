@@ -18,6 +18,9 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
+//selects where the cards will be attached in the DOM
+let attachDom = document.querySelector('.cards-container');
+
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(res => {
         // console.log(res.data.articles);
@@ -29,8 +32,12 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         for(let i = 0; i < myKeys.length; i++){
             let myVar = res.data.articles[myKeys[i]];
             console.log(myVar);
+            myVar.forEach(item => {
+                attachDom.append(articleCard(item));
+            });
         }
     })
+    
     .catch(error => {
         console.log(`This is an Cards index.js error: ${error}`);
     });
