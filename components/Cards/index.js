@@ -27,6 +27,11 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     });
 
 function articleCard() {
-    
+    let cardCont = document.createElement('div');
+    let headlineDiv = document.createElement('div');
+    let authorDiv = document.createElement('div');
+    let imgDivCont = document.createElement('div');
+    let myImg = document.createElement('img');
+    let authorSpan = document.createElement('span');
 
 }
