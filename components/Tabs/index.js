@@ -19,7 +19,6 @@ axios.get(`https://lambda-times-backend.herokuapp.com/topics`)
             mySpan.classList.add('tab');
             mySpan.textContent = item;
             myTopic.append(mySpan);
-
         })
     })
     .catch(error =>{
