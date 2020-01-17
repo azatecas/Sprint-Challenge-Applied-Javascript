@@ -20,7 +20,16 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(res => {
-        console.log(res.data.articles);
+        // console.log(res.data.articles);
+        let myKeys = Object.keys(res.data.articles);
+        // myKeys.forEach((item, index) => {
+        //     console.log(item, myKeys[item[item]]);
+        // })
+
+        for(let i = 0; i < myKeys.length; i++){
+            let myVar = res.data.articles[myKeys[i]];
+            console.log(myVar);
+        }
     })
     .catch(error => {
         console.log(`This is an Cards index.js error: ${error}`);
