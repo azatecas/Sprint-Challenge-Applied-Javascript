@@ -24,7 +24,7 @@ function Header() {
     //setting text content
     dateSpan.textContent = 'SMARCH 28, 2019';
     headerH1.textContent = 'Lambda Times';
-    tempSpan.textContent = '98 &#xb0';
+    tempSpan.textContent = '98°';
 
     //appending elements to top div
     headerDiv.append(dateSpan);
